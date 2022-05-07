@@ -35,6 +35,7 @@ cv::Ptr<cv::FeatureDetector> GetOpenCVDetectorDescriptor(
       feature_cfg.get("edgeThreshold", 31).asInt(),
       feature_cfg.get("firstLevel", 0).asInt(),
       feature_cfg.get("WTA_K", 2).asInt(),
+      cv::ORB::HARRIS_SCORE,
       feature_cfg.get("patchSize", 31).asInt(),
       feature_cfg.get("fastThreshold", 20).asInt());
   } else if (feature_type == "AGAST") {
