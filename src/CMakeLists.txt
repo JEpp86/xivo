@@ -59,6 +59,7 @@ list(APPEND deps
         cholmod
         lapack
         blas
+        stdc++fs
         )
 if (IS_LINUX)
   list(APPEND deps GL)
@@ -119,6 +120,7 @@ endif(BUILD_G2O)
 
 add_executable(vio app/vio.cpp)
 target_link_libraries(vio ${libxivo} gflags::gflags)
+target_link_libraries(vio stdc++fs)
 
 ################################################################################
 # TOOLING
